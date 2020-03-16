@@ -1,4 +1,4 @@
-
+'use strict';
 
 //lesson 1
 // var leftBorderWidth = 1;
@@ -7,24 +7,24 @@
 // console.log(leftBorderWidth);
 // console.log(second);
 
+//lesson 2
+// var number = 5;
+// var string = "Hello!";
+// var sym = Symbol();
+// var boolean = true;
+// null;
+// undefined;
+// var obj = {};
 
-var number = 5;
-var string = "Hello!";
-var sym = Symbol();
-var boolean = true;
-null;
-undefined;
-var obj = {};
-
-let something;
-console.log(something);
-let person = {
-    name: "John",
-    surname: "Smith",
-    age: 25,
-    isMarried: false
-};
-console.log(person["name"]);
+// let something;
+// console.log(something);
+// let person = {
+//     name: "John",
+//     surname: "Smith",
+//     age: 25,
+//     isMarried: false
+// };
+// console.log(person["name"]);
 
 
 let arr = ['plum.png','orange.jpg','apple.phg'];
