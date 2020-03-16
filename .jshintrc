@@ -1,0 +1,13 @@
+{
+    "camelcase" : true,
+    "indent" : 2,
+    "undef" : true,
+    "quomark" : false,
+    "maxlen" : 80,
+    "trailling" : true,
+    "curly" : true,
+    "srict" : false,
+    "browse" : true,
+    "jquery" : true,
+    "esversion" : 6
+}
