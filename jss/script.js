@@ -1,5 +1,5 @@
 'use strict';
-
+// GIT PUSH git push --force origin master
 //lesson 1
 // var leftBorderWidth = 1;
 // let second = 2;

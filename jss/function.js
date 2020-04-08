@@ -47,13 +47,3 @@ alert( "\u{1F60D}" );
 //   alert( checkSpam('buy ViAgRA now') );
 //   alert( checkSpam('free xxxxx') );
 //   alert( checkSpam("innocent rabbit") );
-
-
-
-function extractCurrencyValue (str) {
-    return +str.slice(1);
-}
-
-
-let b = extractCurrencyValue('$120');
-console.log(b);
