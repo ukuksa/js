@@ -1,21 +1,58 @@
-// czw 1
 class Osoba{
-    set imie(imie) { this._imie = imie}
-    get imie() { return this._imie}
-    set wiek(wiek) {this._wiek = wiek}
-    get wiek() { return this._wiek}  
+  
+    set Imie(name) { 
+        if(name[0] === name[0].toUpperCase()) {
+           
+            this.imie = name;
+        }
+        else{
+            this.imie = Osoba.formatujImie(name);
+        }
+        }
+    static formatujImie(name) {
+        return name.replace(name[0], name[0].toUpperCase());
+    }
+    get Imie() { return this.imie;}
+    set Wiek(age) {
+        try{
+            if(Number.isInteger(age)) {
+                console.log("Yes");
+                try{
+                    if(age > 0){
+                        this.wiek = age;
+                    }
+                    else {
+                        throw new RangeError();
+                    }
+                }catch(err2){
+                    console.log("Musisz jeszcze czekać " + age*(-1) + " lat i tylko wtedy zmozesz wpisac sie");
+                }
+                
+            }
+            else {
+                console.log("no");
+                throw new TypeError();
+            }
+        }catch(err){
+            console.log("Trzaba podać liczbu");
+            
+        }
+        }
+    get Wiek() { return this.wiek;}  
     Przedstaw() {
         return "Jestem " + this.imie + ",mam " + this.wiek + " lat";
     }
 }
   
-let person = new Osoba("Illia",640);
+let person = new Osoba();
+person.Imie = "ilia";
+person.Wiek = -40;
 console.log(person.Przedstaw());
 
-person.imie = "Wania";
+person.Imie = "wania";
 console.log(person.Przedstaw());
 
-//czw 2
+
 
 class Pracownik extends Osoba {
     constructor(imie, wiek, praca) {
@@ -29,12 +66,14 @@ class Pracownik extends Osoba {
         return super.Przedstaw() + " pracuje jako " + this.praca;
     }
 }
-let person2 = new Pracownik("Illia",640,"nauczyciel");
+let person2 = new Pracownik("illia",640,"nauczyciel");
 console.log(person2.Przedstaw());
 
-person2.imie = "Ivan";
-person2.wiek = 34;
+person2.Imie = "ivan";
+person2.Wiek = 34;
 
 console.log(person2.Przedstaw());
 
-//czw 3
+
+//czw 3.2 nie dziala poprawnie
+
