@@ -14,29 +14,7 @@ class Osoba{
     }
     get Imie() { return this.imie;}
     set Wiek(age) {
-        try{
-            if(Number.isInteger(age)) {
-                console.log("Yes");
-                try{
-                    if(age > 0){
-                        this.wiek = age;
-                    }
-                    else {
-                        throw new RangeError();
-                    }
-                }catch(err2){
-                    console.log("Musisz jeszcze czekać " + age*(-1) + " lat i tylko wtedy zmozesz wpisac sie");
-                }
-                
-            }
-            else {
-                console.log("no");
-                throw new TypeError();
-            }
-        }catch(err){
-            console.log("Trzaba podać liczbu");
-            
-        }
+        this.wiek = age;
         }
     get Wiek() { return this.wiek;}  
     Przedstaw() {
@@ -46,7 +24,31 @@ class Osoba{
   
 let person = new Osoba();
 person.Imie = "ilia";
-person.Wiek = -40;
+let age = 40;
+try{
+    if(Number.isInteger(age)) {
+        console.log("Yes");
+        try{
+            if(age > 0){
+                person.Wiek = age;
+            }
+            else {
+                throw new RangeError();
+            }
+        }catch(err2){
+            console.log("Musisz jeszcze czekać " + age*(-1) + " lat i tylko wtedy zmozesz wpisac sie");
+        }
+        
+    }
+    else {
+        console.log("no");
+        throw new TypeError();
+    }
+}catch(err){
+    console.log("Trzaba podać liczbu");
+    
+}
+
 console.log(person.Przedstaw());
 
 person.Imie = "wania";
@@ -70,10 +72,31 @@ let person2 = new Pracownik("illia",640,"nauczyciel");
 console.log(person2.Przedstaw());
 
 person2.Imie = "ivan";
-person2.Wiek = 34;
-
+age = 34;
+try{
+    if(Number.isInteger(age)) {
+        console.log("Yes");
+        try{
+            if(age > 0){
+                person2.Wiek = age;
+            }
+            else {
+                throw new RangeError();
+            }
+        }catch(err2){
+            console.log("Musisz jeszcze czekać " + age*(-1) + " lat i tylko wtedy zmozesz wpisac sie");
+        }
+        
+    }
+    else {
+        console.log("no");
+        throw new TypeError();
+    }
+}catch(err){
+    console.log("Trzaba podać liczbu");
+    
+}
 console.log(person2.Przedstaw());
 
 
-//czw 3.2 nie dziala poprawnie
 
